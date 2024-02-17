@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voyage Vista</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="shortcut icon" href="Images/ticket.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind custom color -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {},
+          },
+        },
+      };
+    </script>
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--style-->
+    <style>
+      .font-raleway {
+        font-family: "Raleway", sans-serif;
+      }
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+      .textprime {
+        color: #030712;
+      }
+      .prime {
+        color: #1dd100;
+      }
+    </style>
+  </head>
+  <body>
+    <!--navbar start-->
+    <nav>
+      <div class="container mx-auto my-8">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <a class="text-4xl font-raleway font-extrabold text-[textprime]"
+              >Voyage Vista</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li class="text-lg font-raleway font-medium"><a>Home</a></li>
+              <li class="text-lg font-raleway font-medium"><a>About</a></li>
+              <li class="text-lg font-raleway font-medium">
+                <a>Destination</a>
+              </li>
+              <li class="text-lg font-raleway font-medium"><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a
+              class="btn text-[#1dd100] text-xl font-bold px-8 bg-[#1DD1001A] rounded-lg"
+              ><p>Bus</p>
+              <img src="images/bus-icon.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--navbar end-->
+
+    <!--banner start-->
+    <section
+      class="container mx-auto my-8 bg-[url(images/banner.png)] bg-no-repeat bg-cover bg-center h-[750px] rounded-3xl text-center text-white flex flex-col justify-center"
+    >
+      <div class="flex flex-col gap-8 items-center">
+        <div class="flex flex-col gap-4">
+            <h2 class="font-raleway font-extrabold text-6xl">
+                End-to-End Travel with <br />
+                <span class="text-[#1dd100]">Voyage Vista</span>
+              </h2>
+              <p>
+                Yes, you can run unit tests and view the results directly within the
+                app. The <br />integrated testing features allow for a streamlined .
+              </p>
+        </div>
+        
+        <a
+          href=""
+          class="px-[30px] btn w-max bg-[#1dd100] text-black rounded-lg border-none font-bold text-xl"
+          >Buy Tickets</a
+        >
+      </div>
+    </section>
+    <section class="container mx-auto my-8 font-inter">
+        <div class="w-full flex flex-col lg:flex-row lg:justify-around lg:left-16 lg:relative lg:-top-28">
+            <div class="flex justify-center border-b-4 bg-white rounded-2xl border-[#1dd100] lg:w-max py-8 px-10 gap-5 ">
+                <img src="images/people.png" alt="">
+                <div class="flex flex-col gap-2">
+                    <p class="font-bold text-4xl">500k+</p>
+                    <p>Registered users</p>
+                </div>
+            </div>
+            <div class="flex justify-center border-b-4 bg-white rounded-2xl border-[#1dd100] lg:w-max py-8 px-10 gap-5">
+                <img src="images/ticket-cupon.png" alt="">
+                <div class="flex flex-col gap-2">
+                    <p class="font-bold text-4xl">1.7 Lacks</p>
+                    <p>Tickets sold</p>
+                </div>
+            </div>
+            <div class="flex justify-center border-b-4 bg-white rounded-2xl border-[#1dd100] lg:w-max py-8 px-10 gap-5">
+                <img src="images/stoppage.png" alt="">
+                <div class="flex flex-col gap-2">
+                    <p class="font-bold text-4xl">80k+</p>
+                    <p>Pental partners</p>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </section>
+    <!--banner end-->
+  </body>
+</html>
