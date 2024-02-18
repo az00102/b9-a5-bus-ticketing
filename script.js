@@ -13,14 +13,25 @@ const nextButton = document.getElementById('next');
 const appyButton = document.getElementById('apply');
 const coupon = document.getElementById('coupon');
 const discount = document.getElementById('discount');
+const mainSection = document.querySelectorAll('main-sections');
+const success = document.getElementById('success');
+const continueButton = document.getElementById('continue');
+const couponInput = document.getElementById('coupon-input');
+const invalidCoupon = document.getElementById('invalid-coupon');
 
 var count = 0;
 var cost = 0;
 var checker = false;
 var tempArr = [];
+var invalidCouponChecker = false;
 
 contactNumber.addEventListener('input', handleNextButtonState);
 appyButton.addEventListener('click', grandTotalCounter);
+nextButton.addEventListener('click', handleNexButtonAction);
+
+function handleNexButtonAction() {
+    window.open('success.html', '_blank');
+}
 
 function handleNextButtonState() {
     if (contactNumber.value.trim() !== '' && !isNaN(contactNumber.value) && count !== 0) {
@@ -38,10 +49,14 @@ function grandTotalCounter() {
             const dis = document.createElement('p');
             dis.textContent = 'Discount';
             const amount = document.createElement('p');
-            amount.textContent = 'BDT ' + ((20 / 100) * cost);
+            amount.textContent = 'BDT ' + ((15 / 100) * cost);
             discount.appendChild(dis);
             discount.appendChild(amount);
             discount.classList.remove('hidden');
+            couponInput.classList.add('hidden');
+            if(invalidCouponChecker){
+                invalidCoupon.classList.add('hidden');
+            }
         }
         else if (coupon.value == 'Couple 20') {
             grandP.innerText = cost - ((20 / 100) * cost);
@@ -52,11 +67,22 @@ function grandTotalCounter() {
             discount.appendChild(dis);
             discount.appendChild(amount);
             discount.classList.remove('hidden');
+            discount.classList.add('flex');
+            couponInput.classList.add('hidden');
+            if(invalidCouponChecker){
+                invalidCoupon.classList.add('hidden');
+            }
         }
-        else{
-            const warn = document.createElement('p');
-            warn.textContent = 'Invalid coupon code!'
-            warn.style.color = 'red';
+        else if (coupon.value !== '') {
+            if (!invalidCouponChecker) {
+                const warn = document.createElement('p');
+                warn.textContent = 'Invalid coupon code!'
+                warn.style.color = 'red';
+                invalidCoupon.classList.remove('hidden');
+                invalidCoupon.classList.add('flex');
+                invalidCoupon.appendChild(warn);
+                invalidCouponChecker = true;
+            }
         }
     }
 }

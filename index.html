@@ -52,7 +52,7 @@
   </head>
   <body>
     <!--navbar start-->
-    <nav>
+    <nav class="main-sections">
       <div class="container mx-auto my-8">
         <div class="navbar bg-base-100">
           <div class="navbar-start">
@@ -111,7 +111,7 @@
 
     <!--banner start-->
     <section
-      class="container mx-auto my-8 bg-[url(images/banner.png)] bg-no-repeat bg-cover bg-center h-[750px] rounded-3xl text-center text-white flex flex-col justify-center"
+      class="main-sections container mx-auto my-8 bg-[url(images/banner.png)] bg-no-repeat bg-cover bg-center h-[750px] rounded-3xl text-center text-white flex flex-col justify-center"
     >
       <div class="flex flex-col gap-8 items-center">
         <div class="flex flex-col gap-4">
@@ -132,7 +132,7 @@
         >
       </div>
     </section>
-    <section class="container mx-auto my-8 font-inter">
+    <section class="main-sections container mx-auto my-8 font-inter">
       <div
         class="w-full flex flex-col lg:flex-row lg:justify-around lg:left-16 lg:relative lg:-top-28"
       >
@@ -169,7 +169,7 @@
     <!--banner end-->
 
     <!--Best offer section start-->
-    <section class="container mx-auto my-8">
+    <section class="main-sections container mx-auto my-8">
       <div class="flex flex-col gap-12 items-center">
         <p class="font-inter font-bold text-4xl text-[textprime] text-center">
           Best offers for you
@@ -242,7 +242,7 @@
     <!--seat selection section start-->
     <section
       id="ticket"
-      class="container mx-auto my-28 border-t-[4px] rounded-[30px] border-[#1dd100]"
+      class="main-sections container mx-auto my-28 border-t-[4px] rounded-[30px] border-[#1dd100]"
     >
       <div class="my-16 lg:m-28">
         <div class="flex flex-col text-4xl gap-6 text-center mb-11">
@@ -488,10 +488,11 @@
             </div>
             <div
               id="discount"
-              class="flex justify-between pl-10 pr-16 font-inter font-medium hidden"
+              class="justify-between pl-10 pr-16 font-inter font-medium hidden"
             ></div>
+            <div id="invalid-coupon" class="justify-between pl-10 pr-16 font-inter font-medium hidden"></div>
             <div id="maxalert" class="hidden"></div>
-            <div class="join w-full flex justify-center px-10">
+            <div id="coupon-input" class="join w-full flex justify-center px-10">
               <input
                 id="coupon"
                 class="input bg-white join-item w-full"
@@ -557,7 +558,7 @@
     <!--seat selection section end-->
 
     <!--footer section start-->
-    <footer class="bg-black p-4 lg:py-32 lg:px-32">
+    <footer class="main-sections bg-black p-4 lg:py-32 lg:px-32">
       <div class="flex flex-col lg:flex-row lg:justify-between">
         <div class="flex flex-col gap-5">
           <p class="font-raleway font-extrabold text-3xl text-white">
