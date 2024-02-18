@@ -126,7 +126,7 @@
         </div>
 
         <a
-          href=""
+          href="#ticket"
           class="px-[30px] btn w-max bg-[#1dd100] text-black rounded-lg border-none font-bold text-xl"
           >Buy Tickets</a
         >
@@ -193,7 +193,7 @@
 
               <div class="flex items-center p-14">
                 <p class="font-raleway font-bold text-3xl">
-                  New<span class="relative top-1">15</span><br /><span
+                  NEW<span class="relative top-1">15</span><br /><span
                     class="font-medium text-xl text-[#03071280]"
                     >Coupon Code</span
                   >
@@ -231,7 +231,7 @@
         </div>
 
         <a
-          class="bg-[#faf7f5] btn rounded-lg border-[#1dd100] w-[188px] px-7 text-xl font-bold text-[#1dd100]"
+          class="bg-[#faf7f5] btn rounded-lg border-[#1dd100] w-[188px] px-7 text-xl font-bold text-[#1dd100] h-max"
           href=""
           >See All Offers</a
         >
@@ -241,6 +241,7 @@
 
     <!--seat selection section start-->
     <section
+      id="ticket"
       class="container mx-auto my-28 border-t-[4px] rounded-[30px] border-[#1dd100]"
     >
       <div class="my-16 lg:m-28">
@@ -270,10 +271,10 @@
                 </div>
 
                 <div
-                  class="bg-[#1DD10026] text-[#1dd100] w-max p-4 rounded-lg flex gap-[6px]"
+                  class="bg-[#1DD10026] text-[#1dd100] font-medium font-inter text-lg w-[180px] text-center rounded-lg flex items-center justify-center gap-[6px]"
                 >
                   <img src="images/seat-green.png" alt="" />
-                  40 Seats left
+                  <p><span id="freeseat">40</span> Seats left</p>
                 </div>
               </div>
 
@@ -336,7 +337,7 @@
               <p class="font-raleway font-bold text-3xl">
                 50<span class="relative -top-[2px] text-3xl">0</span>Taka<span
                   class="font-medium text-xl text-[#03071280]"
-                  ><br>Per Seat</span
+                  ><br />Per Seat</span
                 >
               </p>
             </div>
@@ -373,44 +374,80 @@
               alt=""
             />
           </div>
-          <div class="grid grid-cols-5 gap-6 mt-6">
+          <div id="seatlist" class="seat grid grid-cols-5 gap-6 mt-6">
             <p>A</p>
-            <button id="A1" class="font-inter font-medium text-lg bg-[#F7F8F8]">
+            <button
+              id="A1"
+              class="seat font-inter font-medium text-lg bg-[#F7F8F8] rounded-md"
+            >
               A1
             </button>
-            <button id="A2" class="font-inter font-medium text-lg bg-[#F7F8F8]">
+            <button
+              id="A2"
+              class="seat font-inter font-medium text-lg bg-[#F7F8F8] rounded-md"
+            >
               A2
             </button>
-            <button id="A3" class="font-inter font-medium text-lg bg-[#F7F8F8]">
+            <button
+              id="A3"
+              class="seat font-inter font-medium text-lg bg-[#F7F8F8] rounded-md"
+            >
               A3
             </button>
-            <button id="A4" class="font-inter font-medium text-lg bg-[#F7F8F8]">
+            <button
+              id="A4"
+              class="seat font-inter font-medium text-lg bg-[#F7F8F8] rounded-md"
+            >
               A4
             </button>
             <p>B</p>
-            <button id="B1" class="font-inter font-medium text-lg bg-[#F7F8F8]">
+            <button
+              id="B1"
+              class="seat font-inter font-medium text-lg bg-[#F7F8F8] rounded-md"
+            >
               B1
             </button>
-            <button id="B2" class="font-inter font-medium text-lg bg-[#F7F8F8]">
+            <button
+              id="B2"
+              class="seat font-inter font-medium text-lg bg-[#F7F8F8] rounded-md"
+            >
               B2
             </button>
-            <button id="B3" class="font-inter font-medium text-lg bg-[#F7F8F8]">
+            <button
+              id="B3"
+              class="seat font-inter font-medium text-lg bg-[#F7F8F8] rounded-md"
+            >
               B3
             </button>
-            <button id="B4" class="font-inter font-medium text-lg bg-[#F7F8F8]">
+            <button
+              id="B4"
+              class="seat font-inter font-medium text-lg bg-[#F7F8F8] rounded-md"
+            >
               B4
             </button>
             <p>C</p>
-            <button id="C1" class="font-inter font-medium text-lg bg-[#F7F8F8]">
+            <button
+              id="C1"
+              class="seat font-inter font-medium text-lg bg-[#F7F8F8] rounded-md"
+            >
               C1
             </button>
-            <button id="C2" class="font-inter font-medium text-lg bg-[#F7F8F8]">
+            <button
+              id="C2"
+              class="seat font-inter font-medium text-lg bg-[#F7F8F8] rounded-md"
+            >
               C2
             </button>
-            <button id="C3" class="font-inter font-medium text-lg bg-[#F7F8F8]">
+            <button
+              id="C3"
+              class="seat font-inter font-medium text-lg bg-[#F7F8F8] rounded-md"
+            >
               C3
             </button>
-            <button id="C4" class="font-inter font-medium text-lg bg-[#F7F8F8]">
+            <button
+              id="C4"
+              class="seat font-inter font-medium text-lg bg-[#F7F8F8] rounded-md"
+            >
               C4
             </button>
           </div>
@@ -422,48 +459,57 @@
           </p>
           <div class="flex flex-col gap-12 bg-[#F7F8F8] rounded-xl">
             <div>
-              <table class="table font-inter font-medium text-[16px]">
+              <table
+                class="table font-inter font-medium text-[16px] text-center"
+              >
                 <!-- head -->
                 <thead class="font-inter font-medium text-[16px]">
                   <tr>
                     <th>
                       Seat
-                      <span class="bg-[#1dd100] w-max text-white rounded-md"
-                        >2</span
+                      <span
+                        id="ticketcounter"
+                        class="bg-[#1dd100] w-max text-white rounded-md"
+                        >0</span
                       >
                     </th>
                     <th>class</th>
                     <th>price</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <!-- row 1 -->
-                  <tr>
-                    <td>C2</td>
-                    <td>Economy</td>
-                    <td>550</td>
-                  </tr>
-                </tbody>
+                <tbody></tbody>
               </table>
             </div>
-            <div class="flex justify-between pr-[94px] pl-4">
+            <div class="flex justify-between px-10">
               <p class="font-inter font-medium">Total Price</p>
-              <p class="font-inter font-medium">BDT 550</p>
+              <p class="font-inter font-medium pr-4">
+                BDT <span id="totalP">0</span>
+              </p>
             </div>
-            <div class="join w-full pr-[75px] pl-2">
+            <div
+              id="discount"
+              class="flex justify-between pl-10 pr-16 font-inter font-medium hidden"
+            ></div>
+            <div id="maxalert" class="hidden"></div>
+            <div class="join w-full flex justify-center px-10">
               <input
+                id="coupon"
                 class="input bg-white join-item w-full"
                 placeholder="Have any coupon? "
               />
               <button
+                disabled
+                id="apply"
                 class="btn join-item full w- rounded-full w-36 bg-[#1dd100] text-white"
               >
                 Apply
               </button>
             </div>
-            <div class="flex justify-between pr-[94px] pl-4 pb-3">
+            <div class="flex justify-between px-10">
               <p class="font-inter font-medium">Grand Total</p>
-              <p class="font-inter font-medium">BDT 550</p>
+              <p class="font-inter font-medium pr-4">
+                BDT <span id="grandP">0</span>
+              </p>
             </div>
           </div>
 
@@ -478,6 +524,7 @@
             <div class="flex flex-col gap-4">
               <label class="font-inter font-semibold">Phone Number*</label>
               <input
+                id="contact"
                 class="input bg-white join-item w-full border-[#03071266] rounded-lg"
                 placeholder="Enter your phone number"
               />
@@ -489,11 +536,14 @@
                 placeholder="Enter your email id"
               />
             </div>
-            <a
+            <button
               href=""
-              class="px-[30px] btn bg-[#1dd100] text-white rounded-lg border-none font-bold text-xl w-full"
-              >Next</a
+              id="next"
+              class="px-[30px] py-3 bg-gray-400 text-white rounded-lg border-none font-bold text-xl w-full"
+              disabled
             >
+              Next
+            </button>
             <div class="flex justify-between text-[#03071299] px-2">
               <a class="underline" href="">Terms and Conditions</a>
               <a class="underline" href="">Cancellation Policy</a>
@@ -535,7 +585,9 @@
         </div>
       </div>
 
-      <div class="flex flex-col lg:flex-row lg:justify-between border-dashed border-white border-t-2 mt-5 py-6">
+      <div
+        class="flex flex-col lg:flex-row lg:justify-between border-dashed border-white border-t-2 mt-5 py-6"
+      >
         <p class="font-inter font-normal text-[#FFFFFFCC]">
           @all rights reserved, P-Ticket services limited.2024
         </p>
@@ -548,5 +600,6 @@
       </div>
     </footer>
     <!--footer section end-->
+    <script src="script.js"></script>
   </body>
 </html>
