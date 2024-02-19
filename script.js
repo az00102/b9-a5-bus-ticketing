@@ -30,7 +30,7 @@ appyButton.addEventListener('click', grandTotalCounter);
 nextButton.addEventListener('click', handleNexButtonAction);
 
 function handleNexButtonAction() {
-    window.open('success.html');
+    window.location.href = 'success.html';
 }
 
 function handleNextButtonState() {
@@ -88,12 +88,12 @@ function grandTotalCounter() {
     }
 }
 
-for (let i = 0; i < seatButtons.length; i++) {
+for (let i = 1; i < seatButtons.length; i++) {
     const seat = seatButtons[i];
     seat.addEventListener('click', function (event) {
         const seatId = seat.id;
 
-        if (count < 4 && !tempArr.includes(seatId)) {
+        if (count < 4 && !tempArr.includes(seatId) && seatId) {
             count++;
             cost += price;
             tempArr.push(seatId);
