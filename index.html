@@ -9,7 +9,7 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="shortcut icon" href="Images/ticket.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/ticket.png" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- tailwind custom color -->
     <script>
@@ -375,7 +375,7 @@
             />
           </div>
           <div id="seatlist" class="seat grid grid-cols-5 gap-6 mt-6">
-            <p>A</p>
+            <p class="font-inter font-medium text-lg">A</p>
             <button
               id="A1"
               class="seat font-inter font-medium text-lg bg-[#F7F8F8] rounded-md"
@@ -400,7 +400,7 @@
             >
               A4
             </button>
-            <p>B</p>
+            <p class="font-inter font-medium text-lg">B</p>
             <button
               id="B1"
               class="seat font-inter font-medium text-lg bg-[#F7F8F8] rounded-md"
@@ -425,7 +425,7 @@
             >
               B4
             </button>
-            <p>C</p>
+            <p class="font-inter font-medium text-lg">C</p>
             <button
               id="C1"
               class="seat font-inter font-medium text-lg bg-[#F7F8F8] rounded-md"
@@ -457,19 +457,18 @@
           <p class="font-raleway text-[#030712] font-semibold text-2xl mb-6">
             Select Your Seat
           </p>
-          <div class="flex flex-col gap-12 bg-[#F7F8F8] rounded-xl">
-            <div>
+          <div class="flex flex-col gap-12 bg-[#F7F8F8] rounded-xl py-7">
+            <div class="border-b-4">
               <table
                 class="table font-inter font-medium text-[16px] text-center"
               >
-                <!-- head -->
                 <thead class="font-inter font-medium text-[16px]">
                   <tr>
                     <th>
                       Seat
                       <span
                         id="ticketcounter"
-                        class="bg-[#1dd100] w-max text-white rounded-md"
+                        class="bg-[#1dd100] w-max text-white rounded-2xl p-2"
                         >0</span
                       >
                     </th>
@@ -490,12 +489,18 @@
               id="discount"
               class="justify-between pl-10 pr-16 font-inter font-medium hidden"
             ></div>
-            <div id="invalid-coupon" class="justify-between pl-10 pr-16 font-inter font-medium hidden"></div>
+            <div
+              id="invalid-coupon"
+              class="justify-between pl-10 pr-16 font-inter font-medium hidden"
+            ></div>
             <div id="maxalert" class="hidden"></div>
-            <div id="coupon-input" class="join w-full flex justify-center px-10">
+            <div
+              id="coupon-input"
+              class="join w-full flex justify-center"
+            >
               <input
                 id="coupon"
-                class="input bg-white join-item w-full"
+                class="input bg-white join-item w-max"
                 placeholder="Have any coupon? "
               />
               <button
@@ -519,7 +524,7 @@
               <label class="font-inter font-semibold">Passenger Name*</label>
               <input
                 class="input bg-white join-item w-full border-[#03071266] rounded-lg"
-                placeholder="Have any coupon? "
+                placeholder="Enter your name"
               />
             </div>
             <div class="flex flex-col gap-4">
@@ -565,7 +570,7 @@
             Voyage Vista
           </p>
           <p class="font-inter font-normal text-lg text-[#FFFFFFCC]">
-            P-Ticket is a digital platform to make your <br />
+            Voyage Vista is a digital platform to make your <br />
             daily commuting better.
           </p>
         </div>

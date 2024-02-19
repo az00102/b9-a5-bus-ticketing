@@ -30,7 +30,7 @@ appyButton.addEventListener('click', grandTotalCounter);
 nextButton.addEventListener('click', handleNexButtonAction);
 
 function handleNexButtonAction() {
-    window.open('success.html', '_blank');
+    window.open('success.html');
 }
 
 function handleNextButtonState() {
@@ -50,11 +50,12 @@ function grandTotalCounter() {
             dis.textContent = 'Discount';
             const amount = document.createElement('p');
             amount.textContent = 'BDT ' + ((15 / 100) * cost);
+            discount.classList.add('flex');
             discount.appendChild(dis);
             discount.appendChild(amount);
             discount.classList.remove('hidden');
             couponInput.classList.add('hidden');
-            if(invalidCouponChecker){
+            if (invalidCouponChecker) {
                 invalidCoupon.classList.add('hidden');
             }
         }
@@ -64,12 +65,12 @@ function grandTotalCounter() {
             dis.textContent = 'Discount';
             const amount = document.createElement('p');
             amount.textContent = 'BDT ' + ((20 / 100) * cost);
+            discount.classList.add('flex');
             discount.appendChild(dis);
             discount.appendChild(amount);
             discount.classList.remove('hidden');
-            discount.classList.add('flex');
             couponInput.classList.add('hidden');
-            if(invalidCouponChecker){
+            if (invalidCouponChecker) {
                 invalidCoupon.classList.add('hidden');
             }
         }
